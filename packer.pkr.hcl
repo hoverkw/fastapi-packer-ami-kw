@@ -19,8 +19,7 @@ variable "aws_region" {
 variable "docker_image" {
   description = "Docker image to bake into AMI"
   type        = string
-  # Default to httpd for testing, override with your im_image
-  age
+  # Default to httpd for testing, override with your im_image age
   default     = "httpd:latest"
 }
 
