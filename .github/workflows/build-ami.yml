@@ -15,6 +15,7 @@ on:
         description: "Git tag to deploy, for example v1.2.0"
         required: true
         type: string
+        default: 'v1.0.0'
 
 permissions:
   id-token: write  # Required for OIDC
