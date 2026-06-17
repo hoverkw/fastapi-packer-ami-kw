@@ -13,6 +13,7 @@ packer {
 variable "version" {
   type        = string
   description = "Application version baked into the AMI"
+  default     = "v1.0.0"
 }
 
 variable "aws_region" {
