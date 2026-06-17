@@ -19,7 +19,7 @@ variable "version" {
 variable "aws_region" {
   description = "AWS region to build AMI"
   type        = string
-  default     = "us-east-1"
+  default     = "us-east-2"
 }
 
 variable "docker_image" {
