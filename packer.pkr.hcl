@@ -10,6 +10,11 @@ packer {
 }
 
 # Variables
+variable "version" {
+  type        = string
+  description = "Application version baked into the AMI"
+}
+
 variable "aws_region" {
   description = "AWS region to build AMI"
   type        = string
@@ -43,7 +48,7 @@ data "amazon-ami" "amazon_linux_2023" {
 # Locals for computed values
 locals {
   timestamp = regex_replace(timestamp(), "[- TZ:]", "")
-  ami_name  = "fastapi-golden-ami-${var.environment}-${local.timestamp}"
+  ami_name = "fastapi-golden-ami-${var.environment}-${var.version}"
 }
 
 # Source configuration
